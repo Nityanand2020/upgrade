@@ -13,11 +13,8 @@ if ($conn->connect_error) {
 // Create database
 $sql = "CREATE DATABASE amethi";
 
-if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
-} else {
-    echo "Error creating database: " . $conn->error;
-}
+$conn->query($sql);
+    
 $conn->close();
 
  $hn = 'localhost';
